@@ -1,0 +1,1 @@
+echo -n 'Hi, '; echo there

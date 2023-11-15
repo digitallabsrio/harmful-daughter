@@ -1,0 +1,1 @@
+ls no-such-path | wc -l

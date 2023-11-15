@@ -1,0 +1,15 @@
+## # strconv
+#
+
+mkdir -p $WORK/b016/
+cat >$WORK/b016/importcfg << 'EOF' # internal
+# import config
+packagefile errors=$WORK/b003/_pkg_.a
+packagefile internal/bytealg=$WORK/b006/_pkg_.a
+packagefile math=$WORK/b014/_pkg_.a
+packagefile math/bits=$WORK/b015/_pkg_.a
+packagefile unicode/utf8=$WORK/b017/_pkg_.a
+EOF
+cd /usr/local/go/src/strconv
+/usr/local/go/pkg/tool/darwin_amd64/compile -o $WORK/b016/_pkg_.a -trimpath "$WORK/b016=>" -p strconv -std -complete -buildid aG38s1hsbl_hYH6QnPTA/aG38s1hsbl_hYH6QnPTA -goversion go1.14.2 -D "" -importcfg $WORK/b016/importcfg -pack -c=4 ./atob.go ./atof.go ./atoi.go ./decimal.go ./doc.go ./extfloat.go ./ftoa.go ./isprint.go ./itoa.go ./quote.go
+/usr/local/go/pkg/tool/darwin_amd64/buildid -w $WORK/b016/_pkg_.a # internal

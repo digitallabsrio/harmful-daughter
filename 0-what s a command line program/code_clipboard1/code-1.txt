@@ -1,0 +1,4 @@
+touch file-1
+touch file-2
+git add file-1 file-2
+git status

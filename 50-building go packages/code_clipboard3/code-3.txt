@@ -1,0 +1,16 @@
+## # github.com/the-gigi/multi-git/pkg/repo_manager
+#
+
+mkdir -p $WORK/b146/
+cat >$WORK/b146/importcfg << 'EOF' # internal
+# import config
+packagefile errors=$WORK/b003/_pkg_.a
+packagefile fmt=$WORK/b002/_pkg_.a
+packagefile os=$WORK/b024/_pkg_.a
+packagefile os/exec=$WORK/b035/_pkg_.a
+packagefile path/filepath=$WORK/b037/_pkg_.a
+packagefile strings=$WORK/b038/_pkg_.a
+EOF
+cd /Users/gigi.sayfan/git/multi-git/pkg/repo_manager
+/usr/local/go/pkg/tool/darwin_amd64/compile -o $WORK/b146/_pkg_.a -trimpath "$WORK/b146=>" -p github.com/the-gigi/multi-git/pkg/repo_manager -lang=go1.13 -complete -buildid GTr_KQ6MrhviTaqa_udl/GTr_KQ6MrhviTaqa_udl -goversion go1.14.2 -D "" -importcfg $WORK/b146/importcfg -pack -c=4 ./repo_manager.go
+/usr/local/go/pkg/tool/darwin_amd64/buildid -w $WORK/b146/_pkg_.a # internal
